@@ -647,7 +647,8 @@ export class NotePreview extends ItemView implements MDRendererCallback {
         }
         this.showLoading('上传图片中...');
         // 获取token
-        const token = await this.getToken();
+        // const token = await this.getToken();
+        const token = this.settings.authKey;
         if (token === '') {
             return;
         }
@@ -694,7 +695,8 @@ export class NotePreview extends ItemView implements MDRendererCallback {
         this.showLoading('上传中...');
         try {
             // 获取token
-            const token = await this.getToken();
+            // const token = await this.getToken();
+            const token = this.settings.authKey;
             if (token === '') {
                 this.showMsg('获取token失败,请检查网络链接!');
                 return;

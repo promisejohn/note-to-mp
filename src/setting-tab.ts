@@ -386,7 +386,7 @@ export class NoteToMpSettingTab extends PluginSettingTab {
 			button.setButtonText('测试公众号');
 			button.onClick(async () => {
 				button.setButtonText('测试中...');
-				await this.testWXInfo();
+				// await this.testWXInfo();
 				button.setButtonText('测试公众号');
 			})
 		})
